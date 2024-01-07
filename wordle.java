@@ -5,6 +5,7 @@ import javax.swing.*;
 
 public class wordle extends JFrame {
     JPanel container,main;
+    JLabel chance;
     Font f1=new Font("Tahoma",Font.BOLD,16);
     ArrayList<JTextField> tf=new ArrayList<>();
     JButton check,cancel;
@@ -22,8 +23,21 @@ public class wordle extends JFrame {
         add(container);
         generator();
 
+        chance = new JLabel("Chances Remaining : 5");
+        chance.setBounds(170,270,200,50);
+        chance.setFont(new Font("Tahoma",Font.PLAIN,14));
+        chance.setForeground(Color.white);
+        add(chance);
+
         check = new JButton("Check");
-        check.setBounds(100,350,100,70);
+        check.setBounds(100,350,100,50);
+        check.setFont(f1);
+        add(check);
+
+        cancel =new JButton("Cancel");
+        cancel.setBounds(300,350,100,50);
+        cancel.setFont(f1);
+        add(cancel);
 
         setLayout(null);
         setLocationRelativeTo(null);
